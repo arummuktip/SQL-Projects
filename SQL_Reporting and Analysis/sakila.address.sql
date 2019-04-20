@@ -5,3 +5,7 @@ select district from sakila.address where address_id >= 10 and district = 'calif
 select * from sakila.address where district = 'california' or district = 'masqat';
 select * from sakila.address;
 select * from sakila.address where address_id >= 10 and (district = 'california' or district = 'texas');
+SELECT * from sakila.address where district = 'california' or district = 'texas' or district = 'england';
+select address, district from sakila.address where district in ('california','texas','england');
+select distinct district from sakila.address where district not in ('california','texas','england');
+select count(distinct district) from sakila.address where district not in ('california','texas','england');
