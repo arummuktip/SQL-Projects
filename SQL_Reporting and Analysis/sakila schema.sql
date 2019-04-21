@@ -15,3 +15,8 @@ select first_name, last_name from sakila.actor where first_name like 'd%';
 select first_name, last_name from sakila.actor where first_name not like 'd%';
 select first_name, last_name from sakila.actor where first_name like '%er%';
 select first_name, last_name from sakila.actor where first_name like 'D_n';
+select * from sakila.actor;
+select * from sakila.actor where actor_id in (select actor_id from sakila.film_actor where film_id = 2);
+select * from sakila.actor;
+select * from sakila.actor where actor_id in (select actor_id from sakila.film_actor where film_id = 2);
+select * from sakila.actor where actor_id in (select actor_id from sakila.film_actor where film_id = (select film_id from sakila.film where title = 'Ace Goldfinger'));
