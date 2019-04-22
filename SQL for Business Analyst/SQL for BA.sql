@@ -1,5 +1,3 @@
-select avg(salary) as average_salary, last_name from employees.employeestable 
-where last_name 
-IN ( select last_name from employees.employeestable where last_name like '%s') 
-group by last_name;
-
+SELECT CONCAT (S_FNAME,' ',S_LNAME) AS S_FULLNAME, S_SUBJECT, S_FEE, MANAGER_ID, SALARY 
+FROM EMPLOYEES.STUDENTSTABLE INNER JOIN EMPLOYEES.EMPLOYEESTABLE
+ON S_ID = EMPLOYEE_ID;
