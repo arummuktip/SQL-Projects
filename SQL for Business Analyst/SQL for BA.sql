@@ -1,3 +1,3 @@
-SELECT * FROM employees.employeestable where salary >= 1600;
-select employee_id, first_name, last_name, salary
- from employees.employeestable where first_name like 'j%';
+select avg(salary), last_name from  employees.employeestable 
+where salary >= 1500 group by last_name;
+select sum(salary) from employees.employeestable;
